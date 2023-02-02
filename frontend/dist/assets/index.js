@@ -34399,8 +34399,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   }
 });
 const CollapsileNavbar_vue_vue_type_style_index_0_lang = "";
-const serverUrl = "http://localhost:5003";
-const webSocketUrl = "ws://localhost:5003";
+const serverUrl = "http://localhost:7860";
+const webSocketUrl = "ws://localhost:7860";
 function processWebSocket(message, global2, notificationProvider) {
   switch (message.type) {
     case "test": {

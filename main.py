@@ -71,7 +71,7 @@ def main():
         import nest_asyncio
         from pyngrok import ngrok
 
-        ngrok_tunnel = ngrok.connect(5003)
+        ngrok_tunnel = ngrok.connect(7860)
         logger.info(f"Public URL: {ngrok_tunnel.public_url}")
         nest_asyncio.apply()
 
@@ -80,7 +80,7 @@ def main():
     from api.app import app as api_app
 
     host = "0.0.0.0" if args.host else "127.0.0.1"
-    uvicorn_run(api_app, host=host, port=5003)
+    uvicorn_run(api_app, host=host, port=7860)
 
 
 def checks():

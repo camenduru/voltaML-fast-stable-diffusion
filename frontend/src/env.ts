@@ -1,2 +1,2 @@
-export const serverUrl = "http://localhost:5003";
-export const webSocketUrl = "ws://localhost:5003";
+export const serverUrl = "http://localhost:7860";
+export const webSocketUrl = "ws://localhost:7860";
