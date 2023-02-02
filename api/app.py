@@ -67,6 +67,8 @@ async def validation_exception_handler(request: Request, _: RequestValidationErr
 
 # Origins that are allowed to access the API
 origins = [
+    "http://camenduru-sandbox.hf.space",
+    "https://camenduru-sandbox.hf.space",
     "http://localhost:7860",
     "https://localhost:7860",
     "http://127.0.0.1:7860",

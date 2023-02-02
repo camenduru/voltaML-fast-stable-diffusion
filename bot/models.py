@@ -24,7 +24,7 @@ class Models(Cog):
         "Show models loaded in the API"
 
         async with ClientSession() as session:
-            async with session.get("http://localhost:7860/api/models/loaded") as r:
+            async with session.get("https://camenduru-sandbox.hf.space/api/models/loaded") as r:
                 status = r.status
                 response: Dict[str, List[str]] = await r.json()
 
@@ -47,7 +47,7 @@ class Models(Cog):
 
         async with ClientSession() as session:
             async with session.get(
-                "http://localhost:7860/api/models/avaliable"
+                "https://camenduru-sandbox.hf.space/api/models/avaliable"
             ) as response:
                 status = response.status
                 data: List[Dict[str, str]] = await response.json()
@@ -73,7 +73,7 @@ class Models(Cog):
 
         async with ClientSession() as session:
             async with session.post(
-                "http://localhost:7860/api/models/load",
+                "https://camenduru-sandbox.hf.space/api/models/load",
                 params={"model": model.value, "backend": backend, "device": device},
             ) as response:
                 status = response.status
@@ -99,7 +99,7 @@ class Models(Cog):
 
         async with ClientSession() as session:
             async with session.post(
-                "http://localhost:7860/api/models/load",
+                "https://camenduru-sandbox.hf.space/api/models/load",
                 params={"model": model, "backend": backend, "device": device},
             ) as response:
                 status = response.status
@@ -121,7 +121,7 @@ class Models(Cog):
 
         async with ClientSession() as session:
             async with session.post(
-                "http://localhost:7860/api/models/unload",
+                "https://camenduru-sandbox.hf.space/api/models/unload",
                 params={"model": model.value, "gpu_id": gpu_id},
             ) as response:
                 status = response.status
@@ -143,7 +143,7 @@ class Models(Cog):
 
         async with ClientSession() as session:
             async with session.post(
-                "http://localhost:7860/api/models/unload",
+                "https://camenduru-sandbox.hf.space/api/models/unload",
                 params={"model": model, "gpu_id": gpu_id},
             ) as response:
                 status = response.status

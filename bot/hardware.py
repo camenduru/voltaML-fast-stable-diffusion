@@ -21,7 +21,7 @@ class Hardware(Cog):
         "List all available GPUs"
 
         async with ClientSession() as session:
-            async with session.get("http://localhost:7860/api/hardware/gpus") as resp:
+            async with session.get("https://camenduru-sandbox.hf.space/api/hardware/gpus") as resp:
                 status = resp.status
                 data: Dict[str, Dict] = await resp.json()
 
@@ -48,7 +48,7 @@ class Hardware(Cog):
         await ctx.defer()
 
         async with ClientSession() as session:
-            async with session.post("http://localhost:7860/api/models/cleanup") as resp:
+            async with session.post("https://camenduru-sandbox.hf.space/api/models/cleanup") as resp:
                 status = resp.status
 
         if status != 200:
