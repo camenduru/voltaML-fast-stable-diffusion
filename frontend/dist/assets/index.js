@@ -34400,7 +34400,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
 });
 const CollapsileNavbar_vue_vue_type_style_index_0_lang = "";
 const serverUrl = "https://camenduru-sandbox.hf.space";
-const webSocketUrl = "wss://https://camenduru-sandbox.hf.space";
+const webSocketUrl = "wss://camenduru-sandbox.hf.space";
 function processWebSocket(message, global2, notificationProvider) {
   switch (message.type) {
     case "test": {
