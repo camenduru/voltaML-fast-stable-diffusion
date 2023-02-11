@@ -1,2 +1,2 @@
-export const serverUrl = "http://localhost:5003";
-export const webSocketUrl = "ws://localhost:5003";
+export const serverUrl = "https://camenduru-sandbox.hf.space";
+export const webSocketUrl = "wss://camenduru-sandbox.hf.space";

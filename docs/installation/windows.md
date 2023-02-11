@@ -68,4 +68,4 @@ All dependencies should get installed automatically
 
 ## 6. Open the WebUI
 
-Please open your browser and navigate to `localhost:5003`
+Please open your browser and navigate to `localhost:7860`

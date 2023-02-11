@@ -91,5 +91,5 @@ python main.py
 
 ### 7. Access the API documentation to see if everything is working
 
-You should now see that the WebUI is running on `http://localhost:5003/`.
-There is an interactive documentation for the API available at `http://localhost:5003/api/docs`.
+You should now see that the WebUI is running on `https://camenduru-sandbox.hf.space/`.
+There is an interactive documentation for the API available at `https://camenduru-sandbox.hf.space/api/docs`.

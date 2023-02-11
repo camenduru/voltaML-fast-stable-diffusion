@@ -11,7 +11,7 @@ services:
       - /home/kubuntu/tmp/outputs:/workspace/voltaML-fast-stable-diffusion/outputs
       - /home/kubuntu/.cache/huggingface:/root/.cache/huggingface
     ports:
-      - "5003:5003"
+      - "7860:7860"
     deploy:
       resources:
         reservations:
