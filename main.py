@@ -60,18 +60,6 @@ Path("traced_unet").mkdir(exist_ok=True)
 Path("converted").mkdir(exist_ok=True)
 
 
-def is_root():
-    "Check if user has elevated privileges"
-    try:
-        is_admin = os.getuid() == 0  # type: ignore
-    except AttributeError:
-        import ctypes
-
-        is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0  # type: ignore
-
-    return is_admin
-
-
 def main():
     "Run the API"
     import torch.backends.cudnn
@@ -133,7 +121,8 @@ def checks():
 
     coloredlogs_install(level=args.log_level)
 
-    if args.in_container:
+    if not args.in_container:
+
         # Check if we are up to date with the latest release
         version_check(commit_hash())
 
@@ -142,7 +131,5 @@ def checks():
 
 
 if __name__ == "__main__":
-    print("Starting the API...")
-
     checks()
     main()
