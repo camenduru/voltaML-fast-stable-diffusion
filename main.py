@@ -98,7 +98,7 @@ def main():
 def checks():
     "Check if the script is run from a virtual environment, if yes, check requirements"
 
-    if not is_root():
+    if not args.in_container:
         if not in_virtualenv():
             create_environment()
 
@@ -133,7 +133,7 @@ def checks():
 
     coloredlogs_install(level=args.log_level)
 
-    if is_root():
+    if args.in_container:
         # Check if we are up to date with the latest release
         version_check(commit_hash())
 
